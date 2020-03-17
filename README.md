@@ -7,5 +7,6 @@ study Data Structure with python
  
   - 크기가 고정돼 있다.
   - 같은 타입의 데이터만 담을 수 있다.
-  | 접근 | O(1) |
-  | 탐색 | O(n) |
+  
+| 접근 | O(1) |
+| 탐색 | O(n) |
