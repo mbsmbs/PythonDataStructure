@@ -54,3 +54,73 @@ study Data Structure with python
         node_2.next = tail_node
         
        ```
+ ## 4. Doubly Linked List
+ 
+  - 일반 링크드 리스트에서 하나가 추가되는데 바로 전 노드도 가리킬 수 있다.
+       ```
+       class Node:
+           def __init__(self, data):
+               self.data = data
+               self.next = None
+               self.prev = None
+       
+       class DoublyLinkedList:
+           def __init__(self):
+               self.head = None
+               self.tail = None
+               
+           def append(self, data):    // append data
+               new_node = Node(data)
+               
+               if self.head is None:
+                   self.head = new_node
+                   self.tail = new_node
+               else:
+                   self.tail.next = new_node
+                   new_node.prev = self.tail
+                   self.tail = new_node
+                   
+           def insert_after(self, previous_node, data):
+               new_node = Node(data)
+               
+               if previous_node is self.tail:
+                   self.tail.next = new_node
+                   new_node.prev = self.tail
+                   self.tail = new_node
+               else:
+                   new_node.next = previous_node.next
+                   new_node.prev = previous_node.next.prev
+                   previous_node.next.prev = new_node
+                   previous_node.next = new_node
+               
+           def find_node_at(self, index):  // access
+               iterator = self.head
+               
+               for _ in range(index):
+                    iterator = iterator.next
+               
+               return iterator
+           
+           def find_node_with_data(self, data):   // Search
+               iterator = self.head
+               
+               while iterator is not None:
+                   if iterator.data == data
+                       return iterator
+                       
+                   iterator = iterator.next
+                   
+               return None
+               
+           def __str__(self):    // output
+               res = "|"
+               
+               iterator = self.head
+               
+               while iterator is not None:
+                   res_Str += " {} |".format(iterator.data)
+                   iterator = iterator.next
+                   
+               return res_str
+       ```
+  
