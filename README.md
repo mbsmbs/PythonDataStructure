@@ -84,16 +84,43 @@ study Data Structure with python
                new_node = Node(data)
                
                if previous_node is self.tail:
-                   self.tail.next = new_node
+                   previous_node.next = new_node
                    new_node.prev = self.tail
                    self.tail = new_node
                else:
                    new_node.next = previous_node.next
-                   new_node.prev = previous_node.next.prev
+                   new_node.prev = previous_node
                    previous_node.next.prev = new_node
                    previous_node.next = new_node
+                   
+           def prepend(self,data):
+               new_node = Node(data)
                
-           def find_node_at(self, index):  // access
+               if self.head is None:
+                   self.head = new_node
+                   self.tail = new_node
+               else:
+                   self.head.prev = new_node
+                   new_node.next = self.head
+                   self.head = new_node
+                   
+           def delete(self, node_to_delete):
+           
+               if node_to_delete is self.head and node_to_delete is self.tail:
+                   self.head = None
+                   self.tail = None
+               elif node_to_delete is self.head:
+                   self.head = self.head.next
+                   self.head.prev = None
+               elif node_to_delete is self.tail:
+                   self.tail = self.tail.prev
+                   self.tail.next = None
+               else:
+                   node_to_delete.next.prev = node_to_delete.prev
+                   node_to_delete.prev.next = node_to_delete.next
+               
+               
+           def find_node_at(self, index):       // access
                iterator = self.head
                
                for _ in range(index):
@@ -124,3 +151,9 @@ study Data Structure with python
                return res_str
        ```
   
+   | Operations | Linked List |
+   | ---------- | ----------- |
+   | Access | O(n) |
+   | Search | O(n) |
+   | Insert | O(n+1) |
+   | Delete | O(n+1) |
