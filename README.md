@@ -187,8 +187,8 @@ study Data Structure with python
         ```
    
   - Python 해시함수는 불변 타입 자료형에만 사용 가능 :
-   - Boolean
-   - int
-   - float
-   - tuple
-   - string
+    - Boolean
+    - int
+    - float
+    - tuple
+    - string
