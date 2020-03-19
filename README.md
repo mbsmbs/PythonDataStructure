@@ -247,6 +247,7 @@ study Data Structure with python
                      node_to_delete.next.prev = node_to_delete.prev
          ```
   - 탐색
+  
  | Operations | Hash Table |
  | ---------- | ----------- |
  | Hash Function | O(1) |
@@ -254,6 +255,7 @@ study Data Structure with python
  | Linked List Search | O(n) |
   
   - 삽입
+  
  | Operations | Hash Table |
  | ---------- | ----------- |
  | Hash Function | O(1) |
@@ -262,6 +264,7 @@ study Data Structure with python
  | Append or modify | O(1) |
   
   - 삭제
+  
  | Operations | Hash Table |
  | ---------- | ----------- |
  | Hash Function | O(1) |
