@@ -247,24 +247,24 @@ study Data Structure with python
                      node_to_delete.next.prev = node_to_delete.prev
          ```
   - 탐색
-  | Operations | Hash Table |
-  | ---------- | ----------- |
-  | Hash Function | O(1) |
-  | Access | O(1) |
-  | Linked List Search | O(n) |
+ | Operations | Hash Table |
+ | ---------- | ----------- |
+ | Hash Function | O(1) |
+ | Access | O(1) |
+ | Linked List Search | O(n) |
   
   - 삽입
-  | Operations | Hash Table |
-  | ---------- | ----------- |
-  | Hash Function | O(1) |
-  | Access | O(1) |
-  | Linked List Search | O(n) |
-  | Append or modify | O(1) |
+ | Operations | Hash Table |
+ | ---------- | ----------- |
+ | Hash Function | O(1) |
+ | Access | O(1) |
+ | Linked List Search | O(n) |
+ | Append or modify | O(1) |
   
   - 삭제
-  | Operations | Hash Table |
-  | ---------- | ----------- |
-  | Hash Function | O(1) |
-  | Access | O(1) |
-  | Linked List Search | O(n) |
-  | Linked List Delete | O(1) |
+ | Operations | Hash Table |
+ | ---------- | ----------- |
+ | Hash Function | O(1) |
+ | Access | O(1) |
+ | Linked List Search | O(n) |
+ | Linked List Delete | O(1) |
