@@ -157,3 +157,38 @@ study Data Structure with python
    | Search | O(n) |
    | Insert | O(n+1) |
    | Delete | O(n+1) |
+
+ ## 5 Hash Table
+ 
+  - key & value
+  - Hash Function : 특정 값을 원하는 범위의 자연수로 바꿔주는 함수
+  
+  1. 고정된 크기의 배열을 만든다.
+  2. 해시 함수를 이용해서 key를 원하는 범위의 자연수로 바꾼다.
+  3. 해시 함수 결과 값 인덱스에 key - value쌍을 저장한다.
+  
+  - 해시 함수를 만드는 2가지 간단한 방법:
+   1. 나누기 :
+        ```
+        def hash_function_remainder(key, array_size):
+            return key % array_size
+        ```
+        
+   2. 곱하기 :
+    - 먼저 0 < a < 1인 아무 값을 정하고
+    - 그다음 a * key. 결과 값의 소수점만 남기고
+    - 남겨진 소수점을 배열의 크기로 곱해준다.
+        ```
+        def hash_function_multiplication(key, array_size, a):
+            temp = a * key
+            temp -= int(temp)
+            
+            return int(array_size * temp)
+        ```
+   
+  - Python 해시함수는 불변 타입 자료형에만 사용 가능 :
+   - Boolean
+   - int
+   - float
+   - tuple
+   - string
