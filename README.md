@@ -275,7 +275,6 @@ study Data Structure with python
  ### Hash Table examples
  ```
  class Node:
-    """링크드 리스트의 노드 클래스"""
     def __init__(self, key, value):
         self.key = key
         self.value = value
