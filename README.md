@@ -272,7 +272,8 @@ study Data Structure with python
  | Linked List Search | O(n) |
  | Linked List Delete | O(1) |
  
- ### Hash Table examples
+ ### Hash Table collision solution :
+ #### Chaining with LinkedList
  ```
  class Node:
     def __init__(self, key, value):
@@ -375,6 +376,13 @@ study Data Structure with python
          else:
              linked_list = self._get_linked_list_for_key(key)    // 없다면 해당 링크드 리스트를 가져와서
              linked_list.append(key, value)                      // 가져온 링크드 리스트에 추가한다.
+             
+     def delete_by_key(self, key):
+        node_to_delete = self._look_up_node(key)              // 지울 노드를 찾고
+        
+        if node_to_delete is not None:                        // 빈노드가 아니라면
+            linked_list = self._get_linked_list_for_key(key)  // 노드의 링크드 리스트를 가져와서
+            linked_list.delete(node_to_delete)                // 해당 노드를 지운다.
 
      def __str__(self):
          res_str = ""
@@ -384,3 +392,12 @@ study Data Structure with python
 
          return res_str[:-1]
  ```
+
+#### Open addressing
+
+ - 충돌이 있을때 다른 비어있는 곳을 찾는다.
+ - Linear Probing : 바로 다음것들이 비어있는지 하나씩 확인
+ - Quadratic Probing : 제곱을 한 값들을 이용해서 인덱스를 찾습니다.
+    - 1의 제곱은 1 : 11    못찾으면 다음
+    - 2의 제곱은 4 : 15    못찾으면 다음
+    - 3의 제곱은 9 : 24    이런식으로....
