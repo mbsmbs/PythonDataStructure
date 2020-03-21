@@ -401,3 +401,4 @@ study Data Structure with python
     - 1의 제곱은 1 : 11    못찾으면 다음
     - 2의 제곱은 4 : 15    못찾으면 다음
     - 3의 제곱은 9 : 24    이런식으로....
+ - Insert, Search, Delete : O(n)
