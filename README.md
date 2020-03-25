@@ -492,3 +492,6 @@ parentheses_checker(case4)
 parentheses_checker(case5)
 parentheses_checker(case6)
 ```
+
+### Dictionary or Map : No order, Key + Value
+### Set : No order, Value : 구현은 원래 Key만 저장하는 것, Key = Value
