@@ -413,7 +413,7 @@ study Data Structure with python
   - 추상 자료형을 먼저 생각하는 이유는 기능위주로 생각하면 코드의 흐름에 집중할 수 있다. 그리고나서 어떻게 구현할 것인지를 생각한다.
 ### List 구현 : 동적 배열 || 링크드 리스트 : Python -> 동적 배열
 ### Queue 구현 : 동적 배열 || 링크드 리스트 : Python -> Linked List : FIFO 가장 먼저 들얼온 데이터가 가장 먼저 삭제된다. 
-### Deque 구현 : : 동적 배열 || 링크드 리스트 : Python -> Doubly Linked List : 맨 앞과 뒤에 데이터를 삽입+삭제
+### Deque 구현 : 동적 배열 || 링크드 리스트 : Python -> Doubly Linked List : 맨 앞과 뒤에 데이터를 삽입+삭제
 ```
 # deque Example
 # 서비스 센터 문의 처리
@@ -457,4 +457,38 @@ center.process_complaint()
 center.process_complaint()
   
 ```
-  
+### Stack 구현 : 동적 배열 || 링크드 리스트 : LIFO 가장 나중에 들어온 데이터가 먼저 삭제된다. : Python -> Stack X 대신 deque 사용 즉 Doubly Linked List
+```
+
+from collections import deque
+
+def parentheses_checker(string):
+    print(f"테스트하는 문자열: {string}")
+    stack = deque() # 사용할 스택 정의
+
+    for i in range(len(string)):
+        if string[i] == "(":
+            stack.append(i)
+        if string[i] == ")":
+            if stack:
+                stack.pop()
+            else:
+                print(f"문자열 {i} 번째 위치에 있는 닫는 괄호에 맞는 열리는 괄호가 없습니다")
+
+    while stack:
+        print(f"문자열 {stack.pop()} 번째 위치에 있는 괄호가 닫히지 않았습니다")
+
+case1 = "(1+2)*(3+5)"
+case2 = "((3*12)/(41-31))"
+case3 = "((1+4)-(3*12)/3"
+case4 = "(12-3)*(56/3))"
+case5 = ")1+14)/3"
+case6 = "(3+15(*3"
+
+parentheses_checker(case1)
+parentheses_checker(case2)
+parentheses_checker(case3)
+parentheses_checker(case4)
+parentheses_checker(case5)
+parentheses_checker(case6)
+```
