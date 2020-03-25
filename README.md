@@ -510,6 +510,7 @@ parentheses_checker(case6)
 ### 이진 트리 (Binary Tree)
   - 각 노드는 최대 2개의 자식 노드를 가질 수 있는 트리.
 ```
+# Binary Tree Example
 class Node:
     def __init__(self, data):
             self.data = data
@@ -546,4 +547,9 @@ print(test_node.data)
 test_node = root_node.left_child.right_child.right_child
 print(test_node.data)
 ```
+  - Full Binary Tree 정 이진 트리 : 모든 노드가 개 또는 2개의 자식 노드를 가지고 있다.
+  - Complete Binary Tree 완전 이진 트리 : 마지막 레벨 전레벨까지 꽉 차 있어야 되고 마지막 레벨은 왼쪽부터 차있어야 된다.
+  - Perfect Binary Tree 포화 이진 트리 : 모든 레벨이 빠짐없이 다 차있어야 된다.
+  
+  - Tree를 배열로 구현 하려면 완전 이진 트리여야만 한다.
   
