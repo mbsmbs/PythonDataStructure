@@ -495,3 +495,55 @@ parentheses_checker(case6)
 
 ### Dictionary or Map : No order, Key + Value : Python -> Hash Table
 ### Set : No order, Value : 구현은 원래 Key만 저장하는 것, Key = Value : Python -> Hash Table
+
+## 7. Tree
+  - Root node : 트리의 시작 노드
+  - Parent Node
+  - Child Node
+  - Sibling Node : 같은 부모를 갖는 노드
+  - Leaf Node : 자식이 없는 노드. 맨 밑 노드.
+  - 깊이 : Root노드에서 떨어져 있는 거리.
+  - Level : 깊이 + 1
+  - 높이 : 트리에서 가장 깊이 있는 노드의 깊이.
+  - 부분 트리 : 어떤 트리의 일부분.
+
+### 이진 트리 (Binary Tree)
+  - 각 노드는 최대 2개의 자식 노드를 가질 수 있는 트리.
+```
+class Node:
+    def __init__(self, data):
+            self.data = data
+            self.left_child = None
+            self.right_child = None
+
+
+root_node = Node("A")
+node_B = Node("B")
+node_C = Node("C")
+node_D = Node("D")
+node_E = Node("E")
+node_F = Node("F")
+node_G = Node("G")
+node_H = Node("H")
+
+root_node.left_child = node_B
+root_node.right_child = node_C
+
+node_B.left_child = node_D
+node_B.right_child = node_E
+node_E.left_child = node_G
+node_E.right_child = node_H
+
+node_C.right_child = node_F
+
+
+test_node = root_node.right_child.right_child    # Tests
+print(test_node.data)
+
+test_node = root_node.left_child.right_child.left_child
+print(test_node.data)
+
+test_node = root_node.left_child.right_child.right_child
+print(test_node.data)
+```
+  
