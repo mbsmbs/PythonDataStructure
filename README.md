@@ -602,3 +602,8 @@ print(left_child_index)
 right_child_index = get_right_child_index(tree, 8)
 print(right_child_index)
 ```
+  - 트리 순회 : 주로 재귀 함수 사용
+  - 기본 동작들 : 
+    - 재귀적으로 왼쪽 부분 트리 순회
+    - 재귀적으로 오른쪽 부분 트리 순회
+    - 현재 노드 데이터를 풀력한다
