@@ -606,4 +606,62 @@ print(right_child_index)
   - 기본 동작들 : 
     - 재귀적으로 왼쪽 부분 트리 순회
     - 재귀적으로 오른쪽 부분 트리 순회
-    - 현재 노드 데이터를 풀력한다
+    - 현재 노드 데이터를 출력한다
+  - Pre-order 순회:
+    - 현재 노드 데이터를 출력한다
+    - 재귀적으로 왼쪽 부분 트리 순회
+    - 재귀적으로 오른쪽 부분 트리 순회
+  - Post-order 순회:
+    - 재귀적으로 왼쪽 부분 트리 순회
+    - 재귀적으로 오른쪽 부분 트리 순회
+    - 현재 노드 데이터를 출력한다
+  - In-order 순회:
+    - 재귀적으로 왼쪽 부분 트리 순회
+    - 현재 노드 데이터를 출력
+    - 재귀적으로 오른쪽 부분 트리 순회
+```
+# In-order Example
+class Node:
+
+    def __init__(self, data):
+        self.data = data
+        self.left_child = None
+        self.right_child = None
+
+def traverse_inorder(node):
+    if node is None:
+        return None
+    else:
+        traverse_inorder(node.left_child)
+        print(node.data)
+        traverse_inorder(node.right_child)
+        
+
+
+node_A = Node("A")
+node_B = Node("B")
+node_C = Node("C")
+node_D = Node("D")
+node_E = Node("E")
+node_F = Node("F")
+node_G = Node("G")
+node_H = Node("H")
+node_I = Node("I")
+
+node_F.left_child = node_B
+node_F.right_child = node_G
+
+node_B.left_child = node_A
+node_B.right_child = node_D
+
+node_D.left_child = node_C
+node_D.right_child = node_E
+
+node_G.right_child = node_I
+
+node_I.left_child = node_H
+
+root_node = node_F
+
+traverse_inorder(root_node)
+```
