@@ -670,6 +670,30 @@ traverse_inorder(root_node)
   - 2 가지 조건:
     - 형태 속성 : 완전 이진 트리 (Complete binary tree)
     - 힙 속성 : 모든 노드의 데이터는 자식 노드들의 데이터보다 크거나 같다
-  
-  - 배열로 힙 구현:
-  
+```
+def swap(tree, index_1, index_2):
+    temp = tree[index_1]
+    tree[index_1] = tree[index_2]
+    tree[index_2] = temp
+
+
+def heapify(tree, index, tree_size):
+    left_child_index = 2 * index
+    right_child_index = 2 * index + 1
+    
+    largest = index
+
+    if 0 < left_child_index < tree_size and tree[largest] < tree[left_child_index]:
+        largest = left_child_index
+
+    if 0 < right_child_index < tree_size and tree[largest] < tree[right_child_index]:
+        largest = right_child_index
+    
+    if largest != index:
+        swap(tree, index, largest)
+        heapify(tree, largest, tree_size)
+    
+tree = [None, 15, 5, 12, 14, 9, 10, 6, 2, 11, 1]
+heapify(tree, 2, len(tree)
+print(tree) 
+```
