@@ -745,3 +745,42 @@ print(data_to_sort)
   - 힙에 데이터 삽입:
     - 힙의 마지막 인덱스에 데이터를 삽입
     - 부모 노드의 데이터와 비교후  부모 데이터가 더 작으면 Swap
+```
+# Heap insert example
+def swap(tree, index_1, index_2):
+    temp = tree[index_1]
+    tree[index_1] = tree[index_2]
+    tree[index_2] = temp
+
+
+def reverse_heapify(tree, index):
+    parent_index = index // 2 
+    if 0 < parent_index < len(tree) and tree[index] > tree[parent_index]:
+        swap(tree, index, parent_index)
+        reverse_heapify(tree, parent_index)
+
+class PriorityQueue:
+    def __init__(self):
+        self.heap = [None]
+
+
+    def insert(self, data):
+        self.heap.append(data)
+        reverse_heapify(self.heap, len(self.heap)-1)
+
+    def __str__(self):
+        return str(self.heap)
+
+
+priority_queue = PriorityQueue()
+
+priority_queue.insert(6)
+priority_queue.insert(9)
+priority_queue.insert(1)
+priority_queue.insert(3)
+priority_queue.insert(10)
+priority_queue.insert(11)
+priority_queue.insert(13)
+
+print(priority_queue)
+```
