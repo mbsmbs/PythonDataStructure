@@ -739,3 +739,9 @@ data_to_sort = [None, 6, 1, 4, 7, 10, 3, 8, 5, 1, 5, 7, 4, 2, 1]
 heapsort(data_to_sort)
 print(data_to_sort)
 ```
+
+  - 우선순위 큐(Priority Queue): 추상 자료형
+    - 데이터가 우선순위 순서대로 나온다.
+  - 힙에 데이터 삽입:
+    - 힙의 마지막 인덱스에 데이터를 삽입
+    - 부모 노드의 데이터와 비교후  부모 데이터가 더 작으면 Swap
