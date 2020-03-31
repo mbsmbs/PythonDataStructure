@@ -815,3 +815,7 @@ print(priority_queue.extract_max())
   - 우선순위 큐를 만들때 자료구조 선택 팁:
     - 힙 : 새로운 데이터를 삽입할 일이 많으면
     - 동적 배열 or 더블리 링크드 릿트: 기존 데이터를 추출할 일이 더 많으면
+
+## 9. 이진 탐색 트리 (Binary Search Tree)
+  - 
+ 
