@@ -817,5 +817,19 @@ print(priority_queue.extract_max())
     - 동적 배열 or 더블리 링크드 릿트: 기존 데이터를 추출할 일이 더 많으면
 
 ## 9. 이진 탐색 트리 (Binary Search Tree)
-  - 
- 
+
+  - Set, Dictionary를 만들 수 있다.
+  - Root노드를 기준으로 왼쪽은 Root보다 작은수 오른쪽은 큰수.
+```
+# Binary Search Tree
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.parent = None
+        self.left_child = None
+        self.right_child = None
+        
+class BinarySearchTree:
+    def __init__(self):
+        self.root = None
+```
