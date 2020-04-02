@@ -834,6 +834,7 @@ class BinarySearchTree:
         self.root = None
 ```
 ```
+# 탐색
 # Binary Search Tree의 데이터를 순서대로 출력
 def print_inorder(node):
     """주어진 노드를 in-order로 출력해주는 함수"""
@@ -849,3 +850,4 @@ class BinarySearchTree:
     def print_sorted_tree(self):
         print_inorder(self.root
 ```
+  - 이진 탐색 트리 삽입 : 삽입 이후에도 속성이 유지되어야 함
