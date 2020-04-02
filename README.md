@@ -833,3 +833,19 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 ```
+```
+# Binary Search Tree의 데이터를 순서대로 출력
+def print_inorder(node):
+    """주어진 노드를 in-order로 출력해주는 함수"""
+    if node is not None:
+        print_inorder(node.left_child)
+        print(node.data)
+        print_inorder(node.right_child)
+
+class BinarySearchTree:
+    def __init__(self):
+        self.root = None
+        
+    def print_sorted_tree(self):
+        print_inorder(self.root
+```
