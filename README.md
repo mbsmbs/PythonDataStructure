@@ -1,8 +1,6 @@
 # PythonDataStructure
 study Data Structure with python
 
-# I) 기본 자료형
-
  ## 1. 정적 배열 (static array)
  
   - 크기가 고정돼 있다.
