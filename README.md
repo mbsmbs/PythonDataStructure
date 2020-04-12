@@ -619,7 +619,7 @@ traverse_inorder(root_node)
 ## 8. Heap
   - 2 가지 조건:
     - 형태 속성 : 완전 이진 트리 (Complete binary tree)
-    - 힙 속성 : 모든 노드의 데이터는 자식 노드들의 데이터보다 크거나 같다
+    - 힙 속성 : 모든 부모노드의 데이터는 자식노드들의 데이터보다 크거나 같다
 ```
 def swap(tree, index_1, index_2):
     temp = tree[index_1]
