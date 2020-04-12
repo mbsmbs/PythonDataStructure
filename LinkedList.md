@@ -1,4 +1,4 @@
- ## 3. Linked List
+ ## 1. Linked List
 
   - 데이터를 순서대로 저장해준다.
   - 요소를 계속 추가할 수 있다.
@@ -23,7 +23,7 @@
         node_2.next = tail_node
         
        ```
- ## 4. Doubly Linked List
+ ## 2. Doubly Linked List
  
   - 일반 링크드 리스트에서 하나가 추가되는데 바로 전 노드도 가리킬 수 있다.
        ```
