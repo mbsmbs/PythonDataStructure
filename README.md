@@ -502,6 +502,12 @@ print(test_node.data)
   - Perfect Binary Tree 포화 이진 트리 : 모든 레벨이 빠짐없이 다 차있어야 된다.
   
   - Tree를 배열로 구현 하려면 완전 이진 트리여야만 한다.
+  - 완전 이진 트리 배열
+  ```
+  complete_binary_tree = [None, 1, 5, 12, 11, 9, 10, 14, 2, 10]
+  ```
+    - 왼쪽 자식 노드를 찾는 방법 : 부모 노드 인덱스 X 2
+    - 오른쪽 자식 노드를  찾는 방법 : 부모 노드 인덱스 X 2 + 1
 ```
 def get_parent_index(complete_binary_tree, index):
     parent_index = index // 2
