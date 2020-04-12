@@ -626,6 +626,7 @@ traverse_inorder(root_node)
   - 2 가지 조건:
     - 형태 속성 : 완전 이진 트리 (Complete binary tree)
     - 힙 속성 : 모든 부모노드의 데이터는 자식노드들의 데이터보다 크거나 같다
+
 ```
 def swap(tree, index_1, index_2):
     temp = tree[index_1]
@@ -633,7 +634,7 @@ def swap(tree, index_1, index_2):
     tree[index_2] = temp
 
 
-def heapify(tree, index, tree_size):
+def heapify(tree, index, tree_size):      // 힙 속성이 충족되지 못했을때 heapify!
     left_child_index = 2 * index
     right_child_index = 2 * index + 1
     
@@ -650,7 +651,7 @@ def heapify(tree, index, tree_size):
         heapify(tree, largest, tree_size)
     
 tree = [None, 15, 5, 12, 14, 9, 10, 6, 2, 11, 1]
-heapify(tree, 2, len(tree)
+heapify(tree, 2, len(tree))
 print(tree) 
 ```
   - Heap Sort : 
