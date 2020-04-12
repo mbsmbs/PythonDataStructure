@@ -1,24 +1,5 @@
 # PythonDataStructure
 study Data Structure with python
-  
- ## 2. 동적 배열 (dynamic  array)
- 
-  - 정적 배열로 만들어진 자료 구조
-  - 정적 배열의 크기를 상황에 맞게 조절한다.
-  - 추가 연산 :
-      - 정적 배열에 남는 공간이 있을때 O(1)
-      - 정적 배열에 남는 공간이 없을때 O(n)
-  - 삽입 연산 :
-      - 정적 배열에 남는 공간이 있을때 O(n)
-      - 정적 배열에 난는 공간이 없을때 O(n)
-  - 공간 낭비 : O(n) -> 더 큰 배열을 만들때 O(n-2)가 낭비
-   
- |        | static array | dynamic array |
- | ------ | ------------ | ------------- |
- | Access | O(1) | O(1) |
- | Search | O(n) | O(n) |
- | Insert | N/A | O(n) or O(1) |
- | Delete | N/A | O(n) or O(1) |
  
  ## 3. Linked List
 
