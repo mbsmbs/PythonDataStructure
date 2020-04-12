@@ -626,7 +626,7 @@ traverse_inorder(root_node)
   - 2 가지 조건:
     - 형태 속성 : 완전 이진 트리 (Complete binary tree)
     - 힙 속성 : 모든 부모노드의 데이터는 자식노드들의 데이터보다 크거나 같다
-
+  - 힙을 만드는 데 걸리는 시간 복잡도 : O(n x logn)
 ```
 def swap(tree, index_1, index_2):
     temp = tree[index_1]
