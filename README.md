@@ -506,8 +506,8 @@ print(test_node.data)
   ```
   complete_binary_tree = [None, 1, 5, 12, 11, 9, 10, 14, 2, 10]
   ```
-    - 왼쪽 자식 노드를 찾는 방법 : 부모 노드 인덱스 X 2
-    - 오른쪽 자식 노드를  찾는 방법 : 부모 노드 인덱스 X 2 + 1
+  - 완전 이진 트리 배열에서 왼쪽 자식 노드를 찾는 방법 : 부모 노드 인덱스 X 2
+  - 완전 이진 트리 배열에서 오른쪽 자식 노드를  찾는 방법 : 부모 노드 인덱스 X 2 + 1
 ```
 def get_parent_index(complete_binary_tree, index):
     parent_index = index // 2
