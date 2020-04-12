@@ -30,11 +30,11 @@ tree = [None, 15, 5, 12, 14, 9, 10, 6, 2, 11, 1]
 heapify(tree, 2, len(tree))
 print(tree) 
 ```
-  - Heap Sort : 
-    - 힙을 만든다
-    - root와 마지막을 바꿔준다
-    - 바뀐 마지막 노드는 없는 노드로 취급
-    - 새로운 Root노드를 Heapify.
+  - Heap Sort : O(nlg(n))
+    - 힙을 만든다                            // O(n x log n) 
+    - root와 마지막을 바꿔준다                // O(1)
+    - 바뀐 마지막 노드는 없는 노드로 취급      // O(log n)
+    - 새로운 Root노드를 Heapify.             // O(n x log n)
 ```
 def heapsort(tree):
     tree_size = len(tree)
