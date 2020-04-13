@@ -18,6 +18,10 @@ class BinarySearchTree:
         self.root = None
 ```
   - 이진 탐색 트리 탐색
+    - 주어진 노드의 데이터와 탐색하려는 데이터 비교
+    - 탐색하려는 데이터가 더 크면 노드의 오른쪽 자식으로 간다
+    - 탐색하려는 데이터가 더 작으면 노드의 왼쪽 자식으로 간다
+    - 탐색하려는 노드를 찾으면 리턴한다
 ```
 # Binary Search Tree에 in-order 순회를 사용하면 데이터를 순서대로 출력
 def print_inorder(node):
