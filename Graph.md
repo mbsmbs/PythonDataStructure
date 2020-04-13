@@ -16,7 +16,8 @@
   - 그래프 만들기:
     - 그래프 노드 클래스
     - 동적 배열 방식 & 해시 테이블 방식
-  - Example:
+    
+  - 그래프 노드 구현:
   ```
   class StationNode:
     """간단한 지하철 역 노드 클래스"""
@@ -48,4 +49,7 @@
     for station in sorted(stations.keys()):
         print(stations[station].station_name)
   ```
-    
+  
+  - 엣지 구현:
+    - 입접 행렬:
+      1.각 노드를
