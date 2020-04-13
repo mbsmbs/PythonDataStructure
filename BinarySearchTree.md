@@ -345,6 +345,8 @@ bst.print_sorted_tree()
     - 삭제하려는 노드에 먼저 접근해야 함
     - 경우 1 : 삭제하려는 데이터가 leaf노드의 데이터일때
     - 경우 2 : 삭제하려는 데이터 노드가 하나의 자식 노드만 있을때
+    - 경우 3 : 삭제하려는 데이터의 노드가 두개의 자식이 있을때
+
     ```
     class Node:
       """이진 탐색 트리 노드 클래스"""
@@ -486,6 +488,20 @@ bst.print_sorted_tree()
           def print_sorted_tree(self):
               """이진 탐색 트리 내의 데이터를 정렬된 순서로 출력해주는 메소드"""
               print_inorder(self.root)  # root 노드를 in-order로 출력한다
+              
+        # 경우 3: 지우려는 노드가 2개의 자식이 있을 때
+        successor = self.find_min(node_to_delete.right_child)  # 삭제하려는 노드의 successor 노드 받아오기
+
+        node_to_delete.data = successor.data  # 삭제하려는 노드의 데이터에 successor의 데이터 저장
+
+        # successor 노드 트리에서 삭제
+        if successor is successor.parent.left_child:  # successor 노드가 오른쪽 자식일 때
+            successor.parent.left_child = successor.right_child
+        else:  # successor 노드가 왼쪽 자식일 때
+            successor.parent.right_child = successor.right_child        
+        
+        if successor.right_child is not None:  # successor 노드가 오른쪽 자식이 있을 떄
+            successor.right_child.parent = successor.parent
 
 
         # 빈 이진 탐색 트리 생성
@@ -511,4 +527,4 @@ bst.print_sorted_tree()
         bst.print_sorted_tree()
     ```
 
-  
+    
