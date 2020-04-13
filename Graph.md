@@ -169,3 +169,10 @@
   for station in sorted(stations.keys()):
           print(stations[station])       
   ```
+
+  - V : 그래프 안에 있는 모든 노드들의 집합. 그래프 노드 = Vertex
+  - E : 그래프 안에 있는 모든 엣지들의 집합.
+  - V & E 관계 : E는 최악의 경우 V^2^에 비례
+  
+  - 노드를 저장하는 공간 : 인접 행렬 & 인접 리스트 이든 : O(V)
+  - 인접행렬이 차지하는 공간 : O(V^2^)
