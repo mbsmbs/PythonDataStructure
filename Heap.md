@@ -108,7 +108,7 @@ class PriorityQueue:
         self.heap = [None]
 
     def insert(self, data):
-        self.heap.append(data
+        self.heap.append(data)
         reverse_heapify(self.heap, len(self.heap)-1)
 
     def extract_max(self):
