@@ -543,6 +543,6 @@ bst.print_sorted_tree()
   ```
   |이진 탐색 트리 연산|시간 복잡도|
   |------------------|-----------|
-  |key를 이용한 key - value 데이터 쌍 삭제|O(h) (평균 시간 복잡도 O(lg(n))O(lg(n)))|
-  |key를 이용한 노드 또는 value 탐색|O(h) (평균 시간 복잡도 O(lg(n))O(lg(n)))|
-  |key - value 쌍 삽입|O(h) (평균 시간 복잡도 $O(lg(n))$$)|
+  |key를 이용한 key - value 데이터 쌍 삭제|O(h) (평균 시간 복잡도 O(lg(n))|
+  |key를 이용한 노드 또는 value 탐색|O(h) (평균 시간 복잡도 O(lg(n))|
+  |key - value 쌍 삽입|O(h) (평균 시간 복잡도 O(lg(n)))|
