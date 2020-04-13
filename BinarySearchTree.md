@@ -526,7 +526,7 @@ bst.print_sorted_tree()
 
 |이진 탐색 트리 연산|시간 복잡도|
 |-----------------|-----------|
-|삽입|O(h) (평균적 O(\lg(n))O(lg(n)), 최악 O(n)O(n))|
-|탐색|O(h)O(h) (평균적 O(\lg(n))O(lg(n)), 최악 O(n)O(n))|
-|삭제|O(h) (평균적 O(\lg(n))O(lg(n)), 최악 O(n)O(n))|
+|삽입|O(h) (평균적 O(lg(n))O(lg(n)), 최악 O(n)O(n))|
+|탐색|O(h) (평균적 O(lg(n))O(lg(n)), 최악 O(n)O(n))|
+|삭제|O(h) (평균적 O(lg(n))O(lg(n)), 최악 O(n)O(n))|
     
