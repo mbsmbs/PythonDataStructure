@@ -455,27 +455,27 @@ class BinarySearchTree:
         print_inorder(self.root)  # root 노드를 in-order로 출력한다
 
 
-# 빈 이진 탐색 트리 생성
-bst = BinarySearchTree()
+        # 빈 이진 탐색 트리 생성
+        bst = BinarySearchTree()
 
-# 데이터 삽입
-bst.insert(7)
-bst.insert(11)
-bst.insert(9)
-bst.insert(17)
-bst.insert(8)
-bst.insert(5)
-bst.insert(19)
-bst.insert(3)
-bst.insert(2)
-bst.insert(4)
-bst.insert(14)
+        # 데이터 삽입
+        bst.insert(7)
+        bst.insert(11)
+        bst.insert(9)
+        bst.insert(17)
+        bst.insert(8)
+        bst.insert(5)
+        bst.insert(19)
+        bst.insert(3)
+        bst.insert(2)
+        bst.insert(4)
+        bst.insert(14)
 
-# leaf 노드 삭제
-bst.delete(2)
-bst.delete(4)
+        # leaf 노드 삭제
+        bst.delete(2)
+        bst.delete(4)
 
-bst.print_sorted_tree()
+        bst.print_sorted_tree()
     ```
     - 경우 2 : 삭제하려는 데이터 노드가 하나의 자식 노드만 있을때
   
