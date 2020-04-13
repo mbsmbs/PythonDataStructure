@@ -112,7 +112,7 @@ class PriorityQueue:
         reverse_heapify(self.heap, len(self.heap)-1)
 
     def extract_max(self):
-        swap(self.heap, 1, len(self.heap) - 1
+        swap(self.heap, 1, len(self.heap) - 1)
         max_value = self.heap.pop()
         heapify(self.heap, 1, len(self.heap))
         return max_value
