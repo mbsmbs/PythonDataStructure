@@ -343,9 +343,9 @@ bst.print_sorted_tree()
 
   - 이진 탐색 트리 삭제
     - 삭제하려는 노드에 먼저 접근해야 함
-    - 경우 1 : 삭제하려는 데이터가 leaf노드의 데이터일때
-    - 경우 2 : 삭제하려는 데이터 노드가 하나의 자식 노드만 있을때
-    - 경우 3 : 삭제하려는 데이터의 노드가 두개의 자식이 있을때
+    - 경우 1 : 삭제하려는 데이터가 leaf노드의 데이터일때 : O(1) 
+    - 경우 2 : 삭제하려는 데이터 노드가 하나의 자식 노드만 있을때 : O(1)
+    - 경우 3 : 삭제하려는 데이터의 노드가 두개의 자식이 있을때 : O(h)
 
     ```
     class Node:
@@ -388,7 +388,6 @@ bst.print_sorted_tree()
 
               # 경우 2: 지우려는 노드가 자식이 하나인 노드일 때:
 
-              # 코드를 쓰세요
               elif node_to_delete.left_child is None:  # 지우려는 노드가 오른쪽 자식만 있을 때:
               # 지우려는 노드가 root 노드일 때
                   if node_to_delete is self.root:
@@ -422,7 +421,6 @@ bst.print_sorted_tree()
           @staticmethod
           def find_min(node):
               """(부분)이진 탐색 트리의 가장 작은 노드 리턴"""
-              # 코드를 쓰세요
               temp = node  # 탐색 변수. 파라미터 node로 초기화
 
               # temp가 node를 뿌리로 갖는 부분 트리에서 가장 작은 노드일 때까지 왼쪽 자식 노드로 간다
@@ -460,7 +458,6 @@ bst.print_sorted_tree()
                   self.root = new_node
                   return
 
-              # 코드를 쓰세요
               temp = self.root  # 저장하려는 위치를 찾기 위해 사용할 변수. root 노드로 초기화한다
 
               # 원하는 위치를 찾아간다
