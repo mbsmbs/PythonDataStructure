@@ -338,7 +338,7 @@
     - 인접한 노드들을 도는데 걸리는 시간 : O(E)
 
 ## 최단 경로
-  - BFS : 
+  ### BFS : 
     - 시작 노드를 방문 표시 후, 큐에 넣음
     - 큐에 아무 노드가 없을 때까지
     - 큐 가장 앞 노드를 꺼낸다
@@ -395,3 +395,17 @@
     bfs(stations, stations["을지로3가"])  # 지하철 그래프에서 을지로3가역을 시작 노드로 bfs 실행
     print(back_track(stations["강동구청"]))  # 을지로3가에서 강동구청역까지 최단 경로 출력
   ```
+
+  ### Dijkstra
+    - 3 가지 변수들의 역할 :
+      - Distance : 특정 노드까지의 최단 거리 예상치
+      - Predecessor : 현재까지 찾은 최단 경로에서 바로 직전의 노드
+      - Complete : 노드까지의 최단 경로를 찾았다고 표시하기위한 변수
+    - 엣지 (A, B)를 relax 한다 : 더 가까운 거리를 찾아서 업데이트를 시켜주는 것
+    
+    - 시작점의 Distance를 0으로, predecessor를 None으로
+    - 모든 노드가 complete 일 때까지 :
+    - complete하지 않은 노드 주 Distance가 가장 작은 노드 선택
+    - 이 노드에 인접한 노드 중 complete하지 않은 노드를 돌면서 각 엣지를 Relax 한다
+    - 현재 노드를 complete 처리한다 
+    
