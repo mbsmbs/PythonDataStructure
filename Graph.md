@@ -272,4 +272,8 @@
   print(stations["노은"].visited)
   print(stations["(대전)신흥"].visited)
   ```
-    
+  
+  - BFS 알고리즘 시간 복잡도 : O(2V+E) -> O(V+E)
+    - 전처리 : O(V)
+    - 큐에 노드를 넣고 빼는 데 걸리는 시간 : O(V)
+    - 큐에서 뺀 노드의 인접한 노드들을 도는데 걸리는 시간 : O(E)
