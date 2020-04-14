@@ -277,8 +277,8 @@
   
   - BFS 알고리즘 시간 복잡도 : O(2V+E) -> O(V+E)
     - 전처리 : O(V)
-    - 큐에 노드를 넣고 빼는 데 걸리는 시간 : O(V)
-    - 큐에서 뺀 노드의 인접한 노드들을 도는데 걸리는 시간 : O(E)
+    - 스택에서 노드 넣고 빼기 : O(V)
+    - 인접한 노드들을 도는데 걸리는 시간 : O(E)
 
 ## Depth First Search (DFS) : 깊이 우선
   - 중요한 추상 자료형 : 스택
@@ -326,10 +326,13 @@
   print(stations["송도"].visited)
   print(stations["개화산"].visited)
 
-    # 강남역과 대전 지하철 역들 연결됐는지 확인
-    print(stations["반석"].visited)
-    print(stations["지족"].visited)
-    print(stations["노은"].visited)
-    print(stations["(대전)신흥"].visited)
-    ```
-    
+  # 강남역과 대전 지하철 역들 연결됐는지 확인
+  print(stations["반석"].visited)
+  print(stations["지족"].visited)
+  print(stations["노은"].visited)
+  print(stations["(대전)신흥"].visited)
+  ```
+  - DFS 시간 복잡도 : O(2V+E) -> O(V+E)
+    - 전처리 : O(V)
+    - 스택에서 노드 넣고 빼기 : O(V)
+    - 인접한 노드들을 도는데 걸리는 시간 : O(E)
