@@ -288,6 +288,7 @@
       - 스택 가장 위 노드를 꺼낸다
       - 노드를 방문표시
       - 인접한 노드들을 모두 보면서 : 처음 방문 하거나 스택에 없으면 스택에 넣는 다는 표시 후 스택에 넣는다
+      
     ```
     from collections import deque
     from subway_graph import *
